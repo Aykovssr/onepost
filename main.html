@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto TikTok Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajout du CSS directement pour une version autonome */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        section {
+            display: none;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .welcome h1 {
+            color: #4CAF50;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a onclick="showSection('home')">Accueil</a></li>
+                <li><a onclick="showSection('terms')">Termes et Conditions</a></li>
+                <li><a onclick="showSection('privacy')">Politique de Confidentialité</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Accueil -->
+        <section id="home" class="active">
+            <h1>Bienvenue sur Auto TikTok Post</h1>
+            <p>Connectez-vous avec TikTok pour automatiser vos publications en toute simplicité.</p>
+        </section>
+
+        <!-- Termes et Conditions -->
+        <section id="terms">
+            <h1>Termes et Conditions</h1>
+            <p>Bienvenue sur Auto TikTok Post. En utilisant ce site, vous acceptez les conditions suivantes :</p>
+            <ul>
+                <li>Respecter les règles de la communauté TikTok.</li>
+                <li>Ne pas utiliser la plateforme pour des activités illicites.</li>
+                <li>Nous ne sommes pas responsables des contenus publiés via notre service.</li>
+            </ul>
+        </section>
+
+        <!-- Politique de Confidentialité -->
+        <section id="privacy">
+            <h1>Politique de Confidentialité</h1>
+            <p>Nous respectons votre vie privée et nous engageons à protéger vos données personnelles. Voici les principes que nous suivons :</p>
+            <ul>
+                <li>Les informations collectées sont utilisées uniquement pour fournir nos services.</li>
+                <li>Nous ne partageons pas vos données avec des tiers sans votre consentement explicite.</li>
+                <li>Vous pouvez demander la suppression de vos données à tout moment.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Auto TikTok Post. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Fonction pour afficher la section sélectionnée
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
